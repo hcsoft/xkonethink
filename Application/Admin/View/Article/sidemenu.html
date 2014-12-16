@@ -35,7 +35,7 @@
         <!-- 子导航 -->
         <notempty name="sub_menu">
             <h3>
-            	<i class="icon <neq name="sub_menu['current']" value="1">icon-fold</neq>"></i>
+            	<notempty name = "sub_menu['_child']"><i class="icon <neq name="sub_menu['current']" value="1">icon-fold</neq>"></i></notempty>
             	<gt name="sub_menu['allow_publish']" value="0"><a class="item" href="{$sub_menu.url|U}">{$sub_menu.title}</a><else/>{$sub_menu.title}</gt>
             </h3>
             <ul class="side-sub-menu <neq name='sub_menu["current"]' value="1">subnav-off</neq>">
