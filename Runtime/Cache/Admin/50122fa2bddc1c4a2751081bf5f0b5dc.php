@@ -51,10 +51,10 @@
                 <?php if(!empty($_extra_menu)): ?>
                     <?php echo extra_menu($_extra_menu,$__MENU__); endif; ?>
                 <?php if(is_array($__MENU__["child"])): $i = 0; $__LIST__ = $__MENU__["child"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub_menu): $mod = ($i % 2 );++$i;?><!-- 子导航 -->
-                    <?php if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?></h3><?php endif; ?>
+                    <?php if(!empty($sub_menu)): if(!empty($key)): ?><h3><i class="icon icon-unfold"></i><?php echo ($key); ?>222</h3><?php endif; ?>
                         <ul class="side-sub-menu">
                             <?php if(is_array($sub_menu)): $i = 0; $__LIST__ = $sub_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i;?><li>
-                                    <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?></a>
+                                    <a class="item" href="<?php echo (U($menu["url"])); ?>"><?php echo ($menu["title"]); ?>33</a>
                                 </li><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul><?php endif; ?>
                     <!-- /子导航 --><?php endforeach; endif; else: echo "" ;endif; ?>
