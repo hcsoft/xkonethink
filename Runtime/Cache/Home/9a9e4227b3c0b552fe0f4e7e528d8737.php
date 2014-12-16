@@ -7,7 +7,7 @@
 <link href="/onethink/Public/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="/onethink/Public/static/bootstrap/css/docs.css" rel="stylesheet">
 <link href="/onethink/Public/static/bootstrap/css/onethink.css" rel="stylesheet">
-
+<link href="/onethink/Public/Home/css/home.css" rel="stylesheet">
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="/onethink/Public/static/bootstrap/js/html5shiv.js"></script>
@@ -28,10 +28,18 @@
 	<!-- 头部 -->
 	<!-- 导航条
 ================================================== -->
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar  navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="<?php echo U('index/index');?>">OneThink</a>
+            <div class="dropdown " style="display: inline-block;">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    子站导航
+                    <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+                </div>
+            </div>
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
