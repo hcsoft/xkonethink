@@ -80,7 +80,7 @@ class ArticleController extends AdminController {
             }
         }
 
-        $cate           =   list_to_tree($cate);    //生成分类树
+        $cate           =   list_to_tree_menu($cate);    //生成分类树
 
         //获取分类id
         $cate_id        =   I('param.cate_id');
