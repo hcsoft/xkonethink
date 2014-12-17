@@ -1,0 +1,12 @@
+.subsite{
+    width:340px;
+    padding:5px 20px
+}
+.subsite a{
+    display: inline-block;
+    padding:5px;
+    color:#000;
+    width:100px;
+    text-align: center;
+    margin-right: 1px;
+}

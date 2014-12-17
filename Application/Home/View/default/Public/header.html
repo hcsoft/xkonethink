@@ -3,30 +3,28 @@
 <div class="navbar  navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <div class="dropdown " style="display: inline-block;">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                    子站导航
-                    <span class="caret"></span>
-                </button>
-                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 
-                </div>
-            </div>
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <think:nav name="nav">
-                    	<eq name="nav.pid" value="0">
-                        <li>
-                            <a href="{$nav.url|get_nav_url}" target="<eq name='nav.target' value='1'>_blank<else/>_self</eq>">{$nav.title}</a>
-                        </li>
-                        </eq>
-                    </think:nav>
-                </ul>
+                <div class="dropdown " style="float:left;">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        子站导航
+                        <span class="caret"></span>
+                    </button>
+                    <div class="dropdown-menu subsite" role="menu" aria-labelledby="dropdownMenu1">
+                        <volist name="SUB_ROOT_CAT" id="vo">
+                            <div style="border-bottom: 1px dotted #333333;display: inline-block;margin-right: 1px; ">
+                                <a href="index.php?s=/Home/Article/lists/category/{$vo.id}" >{$vo.title}</a>
+                            </div>
+                        </volist>
+                    </div>
+                </div>
+                <div style="float:left;height: 40px;line-height: 40px;padding:0 20px;">主办单位：{:C('HOST_UNIT')}</div>
+                <div style="float:right;height: 40px;line-height: 40px;padding:0 20px;"><a href="index.php?s=">服务热线：{:C('SERVICE_TEL')}</a></div>
             </div>
             <div class="nav-collapse collapse pull-right">
                 <if condition="is_login()">

@@ -22,7 +22,6 @@ class IndexController extends HomeController {
         $category = D('Category')->getTree(40);
 
         $lists    = D('Document')->lists(null);
-        echo json_encode($category);
         $this->assign('category',$category);//栏目
         $this->assign('lists',$lists);//列表
         $this->assign('page',D('Document')->page);//分页
