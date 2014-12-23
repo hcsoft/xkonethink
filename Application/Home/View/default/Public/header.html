@@ -81,21 +81,26 @@
         </div>
         <div class="bannercats">
             <ul>
-                <volist name="subbannercat" id="vo">
-                    <li>
-                        {$vo.title}
-                        {$vo.child|count}
-                        <notempty name="vo['child']">
-                            <ul>
-                                <volist name="vo['child']" id="subvo">
-                                    <li>
-                                        {$subvo.title}
-                                    </li>
-                                </volist>
-                            </ul>
-                        </notempty>
-                    </li>
-                </volist>
+                <li><a href="index.php">首页</a>
+                    <volist name="subbannercat" id="vo">
+                        <li>
+                            <a href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">{$vo.title}</a>
+                            <notempty name="vo['child']">
+                                <ul>
+                                    <volist name="vo['child']" id="subvo">
+                                        <li>
+                                            <if condition=" C('INTRO_CAT') eq $vo['id'] ">
+                                                <a href="index.php?s=/Home/Article/{$subvo.id}">{$subvo.title}</a>
+                                            <else/>
+                                                <a href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">{$subvo.title}</a>
+                                            </if>
+
+                                        </li>
+                                    </volist>
+                                </ul>
+                            </notempty>
+
+                    </volist>
             </ul>
         </div>
     </div>

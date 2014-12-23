@@ -15,10 +15,10 @@
 }
 
 .subhead .container{
-    background-image: url(../images/xk/thead.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height:250px;
+    background: url(../images/xk/thead.jpg)  no-repeat ;
+    background-size:  100%;
+    height:282px;
+    margin-top:5px;
 }
 
 .subhead .container .navdiv{
@@ -60,8 +60,81 @@
 .subhead .container .navdiv ul li.noafter:after{
     content: '';
 }
+
+/* 栏目 css */
 .subhead .container .bannercats{
     width:100%;
     height: 40px;
     float:left;
+}
+
+.subhead .container .bannercats >ul{
+    display: table;
+    list-style: none;
+    width:100%;
+    margin: 0;
+    border-top:2px solid #ED9620;
+    white-space: nowrap;
+}
+.subhead .container .bannercats >ul >li:last-child{
+    border-right:none;
+}
+.subhead .container .bannercats >ul >li{
+    display: table-cell;
+    box-sizing:border-box;
+    width:11.11%;
+    text-align: center;
+    background-color: #009983;
+    height:40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+    border-right: 1px solid #d3d3d3;
+    position: relative;
+}
+.subhead .container .bannercats >ul >li a{
+    color:white;
+    display: block;
+    width:100%;
+    height:100%;
+    text-decoration: none;
+}
+.subhead .container .bannercats >ul >li:hover{
+    background-color: #ED9620;
+    color:white;
+}
+
+
+.subhead .container .bannercats >ul >li >ul{
+    display: none;
+    list-style: none;
+    width:120%;
+    position: absolute;
+    left:-10%;
+    margin:0;
+    border-top: 1px dotted #d3d3d3;
+
+}
+
+.subhead .container .bannercats >ul >li >ul>li{
+    background-color: #ED9620;
+    color:white;
+    width:100%;
+    height:40px;
+    line-height: 40px;
+    border-bottom: 1px dotted #d3d3d3;
+}
+
+
+.subhead .container .bannercats >ul >li >ul>li:hover{
+    background-color: #009983;
+    color:white;
+    width:100%;
+    height:40px;
+    line-height: 40px;
+}
+.subhead .container .bannercats >ul >li:hover>ul{
+    display: block;
 }

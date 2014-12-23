@@ -30,7 +30,6 @@ class HomeController extends Controller {
         //查询栏目
         $subbannercat = D('Category')->where( array( 'pid' =>C("SUB_BANNER_CAT")))->select();
         $introcat = C("INTRO_CAT");
-        echo $introcat;
         foreach($subbannercat as &$cat){
             if($cat['id'] <> $introcat){
                 $cat['child'] =  D('Category')->where( array( 'pid' =>$cat['id']))->select();
