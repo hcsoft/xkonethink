@@ -10,3 +10,58 @@
     text-align: center;
     margin-right: 1px;
 }
+.subhead{
+    background-color: #F8F8F8;
+}
+
+.subhead .container{
+    background-image: url(../images/xk/thead.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height:250px;
+}
+
+.subhead .container .navdiv{
+    width:70%;
+    display: inline-block;
+    float:left;
+}
+.subhead .container .navright{
+    width:29%;
+    display: inline-block;
+    float:left;
+    margin-top:185px;
+    color:#eb9620;
+}
+.subhead .container .navdiv ul{
+    margin: 0;
+}
+.subhead .container .navdiv ul li{
+    list-style: none;
+    display: inline-block;
+    width:110px;
+    text-align: left;
+    line-height: 30px;
+    position: relative;
+}
+.subhead .container .navdiv ul li a{
+    color: #808080;
+}
+.subhead .container .navdiv ul li a:hover{
+    color: red;
+}
+.subhead .container .navdiv ul li:after{
+    content: '|';
+    color: #d3d3d3;
+    right:20px;
+    position: absolute;
+}
+
+.subhead .container .navdiv ul li.noafter:after{
+    content: '';
+}
+.subhead .container .bannercats{
+    width:100%;
+    height: 40px;
+    float:left;
+}

@@ -11,33 +11,36 @@
             </button>
             <div class="nav-collapse collapse">
                 <div class="dropdown " style="float:left;">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown">
                         子站导航
                         <span class="caret"></span>
                     </button>
                     <div class="dropdown-menu subsite" role="menu" aria-labelledby="dropdownMenu1">
-                        <volist name="SUB_ROOT_CAT" id="vo">
+                        <volist name="subwebsite" id="vo">
                             <div style="border-bottom: 1px dotted #333333;display: inline-block;margin-right: 1px; ">
-                                <a href="index.php?s=/Home/Article/lists/category/{$vo.id}" >{$vo.title}</a>
+                                <a href="index.php?s=/Home/Article/lists/category/{$vo.id}">{$vo.title}</a>
                             </div>
                         </volist>
                     </div>
                 </div>
                 <div style="float:left;height: 40px;line-height: 40px;padding:0 20px;">主办单位：{:C('HOST_UNIT')}</div>
-                <div style="float:right;height: 40px;line-height: 40px;padding:0 20px;"><a href="index.php?s=">服务热线：{:C('SERVICE_TEL')}</a></div>
+                <div style="float:right;height: 40px;line-height: 40px;padding:0 20px;"><a href="index.php?s=">服务热线：{:C('SERVICE_TEL')}</a>
+                </div>
             </div>
             <div class="nav-collapse collapse pull-right">
                 <if condition="is_login()">
                     <ul class="nav" style="margin-right:0">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-left:0;padding-right:0">{:get_username()} <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                               style="padding-left:0;padding-right:0">{:get_username()} <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{:U('User/profile')}">修改密码</a></li>
                                 <li><a href="{:U('User/logout')}">退出</a></li>
                             </ul>
                         </li>
                     </ul>
-                <else/>
+                    <else/>
                     <ul class="nav" style="margin-right:0">
                         <li>
                             <a href="{:U('User/login')}">登录</a>
@@ -51,3 +54,49 @@
         </div>
     </div>
 </div>
+<header class="subhead" id="overview">
+    <div class="container">
+        <div class="navdiv">
+            <ul style="margin-top:180px;">
+                <think:nav name="nav">
+                    <if condition="($i%7 eq 0) ">
+                        <li class="noafter">
+                            <a href="{$nav.url|get_nav_url}">{$nav.title}</a>
+                        </li>
+                        <else/>
+                        <li>
+                            <a href="{$nav.url|get_nav_url}">{$nav.title}</a>
+                        </li>
+                    </if>
+
+                </think:nav>
+            </ul>
+        </div>
+        <div class="navright">
+            <span>
+                <php>$cnarray = Array('零','一','二','三','四','五','六','日');
+                    echo date('Y年n月j日 星期' , time()).$cnarray[date('N',time())];
+                </php>
+            </span>
+        </div>
+        <div class="bannercats">
+            <ul>
+                <volist name="subbannercat" id="vo">
+                    <li>
+                        {$vo.title}
+                        {$vo.child|count}
+                        <notempty name="vo['child']">
+                            <ul>
+                                <volist name="vo['child']" id="subvo">
+                                    <li>
+                                        {$subvo.title}
+                                    </li>
+                                </volist>
+                            </ul>
+                        </notempty>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+</header>

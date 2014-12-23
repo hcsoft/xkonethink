@@ -26,7 +26,19 @@ class HomeController extends Controller {
         /* 读取站点配置 */
         $config = api('Config/lists');
         C($config); //添加配置
-        $this->assign("SUB_ROOT_CAT",D('Category')->where( array( 'pid' =>C("SUB_ROOT_CAT")))->select());
+        $this->assign('subwebsite',D('Category')->where( array( 'pid' =>C("SUB_ROOT_CAT")))->select());
+        //查询栏目
+        $subbannercat = D('Category')->where( array( 'pid' =>C("SUB_BANNER_CAT")))->select();
+        $introcat = C("INTRO_CAT");
+        echo $introcat;
+        foreach($subbannercat as &$cat){
+            if($cat['id'] <> $introcat){
+                $cat['child'] =  D('Category')->where( array( 'pid' =>$cat['id']))->select();
+            }else{
+                $cat['child'] =  D('Document')->where( array( 'category_id' =>$cat['id']))->select();
+            }
+        }
+        $this->assign('subbannercat',$subbannercat);
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
         }
