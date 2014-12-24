@@ -1,140 +1,238 @@
-.subsite{
-    width:340px;
-    padding:5px 20px
+.subsite {
+    width: 340px;
+    padding: 5px 20px
 }
-.subsite a{
+
+.subsite a {
     display: inline-block;
-    padding:5px;
-    color:#000;
-    width:100px;
+    padding: 5px;
+    color: #000;
+    width: 100px;
     text-align: center;
     margin-right: 1px;
 }
-.subhead{
+
+.subhead {
     background-color: #F8F8F8;
+    padding-top: 5px;
 }
 
-.subhead .container{
-    background: url(../images/xk/thead.jpg)  no-repeat ;
-    background-size:  100%;
-    height:282px;
-    margin-top:5px;
+.subhead .container {
+    background: url(../images/xk/thead.jpg) no-repeat;
+    background-size: 100%;
+    height: 282px;
 }
 
-.subhead .container .navdiv{
-    width:70%;
+.subhead .container .navdiv {
+    width: 70%;
     display: inline-block;
-    float:left;
+    float: left;
+    font-size: 13px;
 }
-.subhead .container .navright{
-    width:29%;
+
+.subhead .container .navright {
+    width: 29%;
     display: inline-block;
-    float:left;
-    margin-top:185px;
-    color:#eb9620;
+    float: left;
+    margin-top: 185px;
+    color: #eb9620;
 }
-.subhead .container .navdiv ul{
+
+.subhead .container .navdiv ul {
     margin: 0;
 }
-.subhead .container .navdiv ul li{
+
+.subhead .container .navdiv ul li {
     list-style: none;
     display: inline-block;
-    width:110px;
+    width: 110px;
     text-align: left;
     line-height: 30px;
     position: relative;
 }
-.subhead .container .navdiv ul li a{
+
+.subhead .container .navdiv ul li a {
     color: #808080;
 }
-.subhead .container .navdiv ul li a:hover{
+
+.subhead .container .navdiv ul li a:hover {
     color: red;
 }
-.subhead .container .navdiv ul li:after{
+
+.subhead .container .navdiv ul li:after {
     content: '|';
     color: #d3d3d3;
-    right:20px;
+    right: 20px;
     position: absolute;
 }
 
-.subhead .container .navdiv ul li.noafter:after{
+.subhead .container .navdiv ul li.noafter:after {
     content: '';
 }
 
 /* 栏目 css */
-.subhead .container .bannercats{
-    width:100%;
+.subhead .container .bannercats {
+    width: 100%;
     height: 40px;
-    float:left;
+    float: left;
 }
 
-.subhead .container .bannercats >ul{
+.subhead .container .bannercats > ul {
     display: table;
     list-style: none;
-    width:100%;
+    width: 100%;
     margin: 0;
-    border-top:2px solid #ED9620;
+    border-top: 2px solid #ED9620;
     white-space: nowrap;
 }
-.subhead .container .bannercats >ul >li:last-child{
-    border-right:none;
+
+.subhead .container .bannercats > ul > li:last-child {
+    border-right: none;
 }
-.subhead .container .bannercats >ul >li{
+
+.navbar .container  .nav{
+    float:right;
+}
+
+.subhead .container .bannercats > ul > li {
     display: table-cell;
-    box-sizing:border-box;
-    width:11.11%;
+    box-sizing: border-box;
+    width: 11.11%;
     text-align: center;
     background-color: #009983;
-    height:40px;
+    height: 40px;
     line-height: 40px;
     font-size: 14px;
     font-weight: bold;
-    color:white;
+    color: white;
     cursor: pointer;
     border-right: 1px solid #d3d3d3;
     position: relative;
 }
-.subhead .container .bannercats >ul >li a{
-    color:white;
+
+.subhead .container .bannercats > ul > li a {
+    color: white;
     display: block;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
 }
-.subhead .container .bannercats >ul >li:hover{
+
+.subhead .container .bannercats > ul > li:hover {
     background-color: #ED9620;
-    color:white;
+    color: white;
 }
 
-
-.subhead .container .bannercats >ul >li >ul{
+.subhead .container .bannercats > ul > li > ul {
     display: none;
     list-style: none;
-    width:120%;
+    width: 120%;
     position: absolute;
-    left:-10%;
-    margin:0;
+    left: -10%;
+    margin: 0;
     border-top: 1px dotted #d3d3d3;
 
 }
 
-.subhead .container .bannercats >ul >li >ul>li{
+.subhead .container .bannercats > ul > li > ul > li {
     background-color: #ED9620;
-    color:white;
-    width:100%;
-    height:40px;
+    color: white;
+    width: 100%;
+    height: 40px;
     line-height: 40px;
     border-bottom: 1px dotted #d3d3d3;
 }
 
-
-.subhead .container .bannercats >ul >li >ul>li:hover{
+.subhead .container .bannercats > ul > li > ul > li:hover {
     background-color: #009983;
-    color:white;
-    width:100%;
-    height:40px;
+    color: white;
+    width: 100%;
+    height: 40px;
     line-height: 40px;
 }
-.subhead .container .bannercats >ul >li:hover>ul{
+
+.subhead .container .bannercats > ul > li:hover > ul {
     display: block;
+}
+
+/*导航css*/
+.webdir{
+    display: inline-block;
+    position: relative;
+}
+.webdir > div:first-child > span {
+    width: 80px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor:pointer;
+    padding: 0;
+    margin: 0;
+    z-index:11;
+    text-align: left;
+    text-indent: 8px;
+    border:1px solid transparent;
+}
+
+.webdir > div:first-child > span:after {
+    content:url("../images/xk/jt.gif");
+    position: absolute;
+    top: -3px;
+    right: 5px;
+}
+
+.webdir > div:first-child:hover > span:after {
+    top: -4px;
+    right: 4px;
+}
+
+
+
+
+.webdir > div:first-child > ul {
+    font-weight: normal;
+    display: none;
+    top:30px;
+    left:0;
+    position: absolute;
+    background-color: white;
+    border:1px solid #d3d3d3;
+    /*border-top: none;*/
+    padding: 5px 0 0 0 ;
+    margin: 0;
+    list-style: none;
+    width:380px;
+    z-index:10;
+}
+
+
+.webdir > div:first-child > ul li {
+    display: inline-block;
+    text-align: center;
+    width:33.33%;
+    height:30px;
+    line-height: 30px;
+    border-bottom: 1px dotted #d3d3d3;
+}
+.webdir > div:first-child:hover> span{
+    background-color: white;
+    border:1px solid #d3d3d3;
+    z-index:11;
+    position: relative;
+    border-bottom: none;
+}
+
+.webdir > div:first-child:hover > ul {
+    display: inline-block;
+}
+
+.container .row {
+    padding:0;
+    margin: 0;
+}
+.mF_YSlider .pic img,.mF_YSlider .pic ul ,.mF_YSlider .pic li ,.mF_YSlider .pic a{
+    width :100%;
+    height:100%;
 }

@@ -26,10 +26,10 @@ class HomeController extends Controller {
         /* 读取站点配置 */
         $config = api('Config/lists');
         C($config); //添加配置
-        $this->assign('subwebsite',D('Category')->where( array( 'pid' =>C("SUB_ROOT_CAT")))->select());
+        $this->assign('subwebsite',D('Category')->where( array( 'pid' =>C('XK_SUB_ROOT_CAT')))->select());
         //查询栏目
-        $subbannercat = D('Category')->where( array( 'pid' =>C("SUB_BANNER_CAT")))->select();
-        $introcat = C("INTRO_CAT");
+        $subbannercat = D('Category')->where( array( 'pid' =>C('XK_SUB_BANNER_CAT')))->select();
+        $introcat = C("XK_INTRO_CAT");
         foreach($subbannercat as &$cat){
             if($cat['id'] <> $introcat){
                 $cat['child'] =  D('Category')->where( array( 'pid' =>$cat['id']))->select();
@@ -38,6 +38,13 @@ class HomeController extends Controller {
             }
         }
         $this->assign('subbannercat',$subbannercat);
+
+        $toplist =  D('Document')->where( array( 'category_id' =>C('XK_TOP_CAT'),'status'=>array('gt',0)))->select();
+        foreach($toplist as &$vo){
+            $vo['cover']=get_cover($vo['cover_id']);
+        }
+//        echo json_encode($toplist);
+        $this->assign('toplist',$toplist);
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
         }

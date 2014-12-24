@@ -1,16 +1,21 @@
+<!-- 底部
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <p> 网站地图 | 法律声明 | 全站搜索| 机构查询 | 联系我们 | 关于我们 | 使用帮助</p>
 
-    <!-- 底部
-    ================================================== -->
-    <footer class="footer">
-      <div class="container">
-          <p> 本站由 <strong><a href="http://www.onethink.cn" target="_blank">OneThink</a></strong> 强力驱动</p>
-      </div>
-    </footer>
+        <p>主办单位：{:C('XK_HOST_UNIT')}　联系地址：{:C('XK_LINK_ADDRESS')}</p>
+
+        <p> 电话：{:C('XK_LINK_TEL')}　邮编:{:C('XK_POSTCODE')}　传真:{:C('XK_FAX')}　邮箱:{:C('XK_EMAIL')}</p>
+
+        <p> 建议浏览器分辨率：1024*768　{:C('WEB_SITE_ICP')} 网站运营与技术支持：昆明恒辰科技有限公司 </p>
+    </div>
+</footer>
 
 <include file="Public/var"/>
 <block name="script"></block> <!-- 用于加载js代码 -->
 <!-- 页面footer钩子，一般用于加载插件JS文件和JS代码 -->
 {:hook('pageFooter', 'widget')}
 <div class="hidden"><!-- 用于加载统计代码等隐藏元素 -->
-	<block name="hidden"></block>
+    <block name="hidden"></block>
 </div>

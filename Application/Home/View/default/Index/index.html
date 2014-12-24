@@ -1,45 +1,30 @@
 <extend name="Base/common"/>
 
-<block name="header">
-
-</block>
-<block name="banner">
-
-</block>
 
 <block name="side">
-<!-- 左侧 nav
-================================================== -->
-    <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
-            {:W('Category/lists', array(1, true))}
-        </ul>
-    </div>
 </block>
 
 <block name="body">
-    <div class="span9">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">
-            <article:list name="article" category="1" child="true">
-                <div class="">
-                    <h3><a href="{:U('Article/detail?id='.$article['id'])}">{$article.title}</a></h3>
-                </div>
-                <div>
-                    <p class="lead">{$article.description}</p>
-                </div>
-                <div>
-                    <span><a href="{:U('Article/detail?id='.$article['id'])}">查看全文</a></span>
-                    <span class="pull-right">
-                        <span class="author">{$article.uid|get_username}</span>
-                        <span>于 {$article.create_time|date='Y-m-d H:i',###}</span> 发表在 <span>
-                        <a href="{:U('Article/lists?category='.get_category_name($article['category_id']))}">{$article.category_id|get_category_title}</a></span> ( 阅读：{$article.view} )
-                    </span>
-                </div>
-                <hr/>
-            </article:list>
-
-        </section>
+    <style>
+        /*#myFocus{ width:600px; height:400px;}*/
+    </style>
+    <div id="myFocus"><!--焦点图盒子-->
+        <div class="loading"><img src="__IMG__/loading.gif" alt="请稍候..." /></div><!--载入画面(可删除)-->
+        <div class="pic"><!--内容列表(li数目可随意增减)-->
+            <ul>
+                <volist name="toplist" id="vo">
+                    <li><a href="#"><img src="./{$vo.cover.path}"  alt="{$vo.title}" text="{$vo.title}" /></a></li>
+                </volist>
+            </ul>
+        </div>
     </div>
+    <script type="text/javascript">
+        myFocus.set({
+            id:'myFocus',//ID
+            pattern:'mF_YSlider',
+            width:600,
+            height:400
+        });
+    </script>
 </block>
+

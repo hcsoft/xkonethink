@@ -10,25 +10,22 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="nav-collapse collapse">
-                <div class="dropdown " style="float:left;">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                            data-toggle="dropdown">
-                        子站导航
-                        <span class="caret"></span>
-                    </button>
-                    <div class="dropdown-menu subsite" role="menu" aria-labelledby="dropdownMenu1">
-                        <volist name="subwebsite" id="vo">
-                            <div style="border-bottom: 1px dotted #333333;display: inline-block;margin-right: 1px; ">
-                                <a href="index.php?s=/Home/Article/lists/category/{$vo.id}">{$vo.title}</a>
-                            </div>
-                        </volist>
+                <div class="webdir">
+                    <div>
+                        <span>子站导航</span>
+                        <ul>
+                            <volist name="subwebsite" id="vo">
+                                <li>
+                                    <a href="index.php?s=/Home/Article/lists/category/{$vo.id}">{$vo.title}</a>
+                            </volist>
+                        </ul>
                     </div>
                 </div>
-                <div style="float:left;height: 40px;line-height: 40px;padding:0 20px;">主办单位：{:C('HOST_UNIT')}</div>
-                <div style="float:right;height: 40px;line-height: 40px;padding:0 20px;"><a href="index.php?s=">服务热线：{:C('SERVICE_TEL')}</a>
+                <div style="display:inline-block;height: 40px;line-height: 40px;padding:0 20px;">
+                    主办单位：{:C('XK_HOST_UNIT')}
                 </div>
-            </div>
-            <div class="nav-collapse collapse pull-right">
+                <div style="float:right;height: 40px;line-height: 40px;padding:0 20px;"><a href="index.php?s=">服务热线：{:C('XK_SERVICE_TEL')}</a>
+                </div>
                 <if condition="is_login()">
                     <ul class="nav" style="margin-right:0">
                         <li class="dropdown">
@@ -81,26 +78,26 @@
         </div>
         <div class="bannercats">
             <ul>
-                <li><a href="index.php">首页</a>
-                    <volist name="subbannercat" id="vo">
-                        <li>
-                            <a href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">{$vo.title}</a>
-                            <notempty name="vo['child']">
-                                <ul>
-                                    <volist name="vo['child']" id="subvo">
-                                        <li>
-                                            <if condition=" C('INTRO_CAT') eq $vo['id'] ">
-                                                <a href="index.php?s=/Home/Article/{$subvo.id}">{$subvo.title}</a>
+                <li><a href="index.php">首页</a></li>
+                <volist name="subbannercat" id="vo">
+                    <li>
+                        <a href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">{$vo.title}</a>
+                        <notempty name="vo['child']">
+                            <ul>
+                                <volist name="vo['child']" id="subvo">
+                                    <li>
+                                        <if condition=" C('INTRO_CAT') eq $vo['id'] ">
+                                            <a href="index.php?s=/Home/Article/{$subvo.id}">{$subvo.title}</a>
                                             <else/>
-                                                <a href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">{$subvo.title}</a>
-                                            </if>
+                                            <a href="index.php?s=/Home/Article/lists/category/{$subvo.name}.html">{$subvo.title}</a>
+                                        </if>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </notempty>
+                    </li>
+                </volist>
 
-                                        </li>
-                                    </volist>
-                                </ul>
-                            </notempty>
-
-                    </volist>
             </ul>
         </div>
     </div>
