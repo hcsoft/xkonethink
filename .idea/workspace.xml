@@ -2,92 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cfd44c8-390a-48d5-85f8-6791bcca8744" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_51xflash/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kdui/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kiki/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kiki/ar-left.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kiki/ar-right.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_games_tb/ar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_qiyi/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_tbhuabao/btn-bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_classicHC/btn-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_taobaomall/btn-bg2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_classicHB/btn-blue.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_classicHB/btn-gray.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_classicHC/btn-red.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_pithy_tb/btn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kdui/dots.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/images/xk/jt.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/images/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_qiyi/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_51xflash/play.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_sohusports/sh-btn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kdui/slider-arrows.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_51xflash/tit-ar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_kiki/tit-ar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/img/mF_pithy_tb/turn.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_51xflash.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_51xflash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_YSlider.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_YSlider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_classicHB.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_classicHB.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_classicHC.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_classicHC.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_dleung.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_dleung.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_expo2010.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_expo2010.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_fancy.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_fancy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_fscreen_tb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_fscreen_tb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_games_tb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_games_tb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_kdui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_kdui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_kiki.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_kiki.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_ladyQ.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_ladyQ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_liquid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_liquid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_liuzg.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_liuzg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_luluJQ.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_luluJQ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_pconline.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_pconline.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_peijianmall.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_peijianmall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_pithy_tb.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_pithy_tb.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_qiyi.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_qiyi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_quwan.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_quwan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_rapoo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_rapoo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_shutters.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_shutters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_slide3D.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_slide3D.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_sohusports.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_sohusports.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_taobao2010.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_taobao2010.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_taobaomall.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_taobaomall.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_tbhuabao.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/mf-pattern/mF_tbhuabao.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/myfocus-2.0.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/HomeController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/HomeController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/default/Public/body.html" afterPath="$PROJECT_DIR$/Application/Home/View/default/Public/body.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/default/Public/footer.html" afterPath="$PROJECT_DIR$/Application/Home/View/default/Public/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/default/Public/head.html" afterPath="$PROJECT_DIR$/Application/Home/View/default/Public/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/default/Public/header.html" afterPath="$PROJECT_DIR$/Application/Home/View/default/Public/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/home.css" afterPath="$PROJECT_DIR$/Public/Home/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/default/Index/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/default/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="onethink.iws" />
@@ -116,8 +31,8 @@
       <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/Home/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8227848" vertical-offset="2691" max-vertical-offset="3402">
-              <caret line="234" column="81" selection-start-line="234" selection-start-column="81" selection-end-line="234" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.29113925" vertical-offset="1641" max-vertical-offset="3416">
+              <caret line="132" column="14" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -909,13 +824,20 @@
       <option name="project" value="LOCAL" />
       <updated>1419344799301</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1,处理了页脚&#10;2,增加了置顶图片转换">
+      <created>1419442424275</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1419442424275</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1612" height="874" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -932,7 +854,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -959,7 +880,8 @@
     <MESSAGE value="1,增加了子栏目的配置文件" />
     <MESSAGE value="1,完成了导航&#10;2,增加了主办单位和服务电话的配置" />
     <MESSAGE value="1,增加栏目列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="1,增加栏目列表" />
+    <MESSAGE value="1,处理了页脚&#10;2,增加了置顶图片转换" />
+    <option name="LAST_COMMIT_MESSAGE" value="1,处理了页脚&#10;2,增加了置顶图片转换" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1339,8 +1261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8227848" vertical-offset="2691" max-vertical-offset="3402">
-          <caret line="234" column="81" selection-start-line="234" selection-start-column="81" selection-end-line="234" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.29113925" vertical-offset="1641" max-vertical-offset="3416">
+          <caret line="132" column="14" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
           <folding />
         </state>
       </provider>
