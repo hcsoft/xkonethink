@@ -1226,7 +1226,7 @@ function getBreadcrumb($art){
 //    echo json_encode($art);
     $ret = '您现在正在浏览： <a href="index.php">首页</a>';
 //    echo $art['category_id'];
-    echo $art['pid'];
+//    echo $art['pid'];
     $parents = array();
     if($art['category_id'] ){
         $isdoc = true;
