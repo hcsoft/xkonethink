@@ -39,16 +39,11 @@ class HomeController extends Controller {
         }
         $this->assign('subbannercat',$subbannercat);
 
-        $toplist =  D('Document')->where( array( 'category_id' =>C('XK_TOP_CAT'),'status'=>array('gt',0)))->select();
-        foreach($toplist as &$vo){
-            $vo['cover']=get_cover($vo['cover_id']);
-        }
-//        echo json_encode($toplist);
-        $this->assign('toplist',$toplist);
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
         }
     }
+
 
 	/* 用户登录检测 */
 	protected function login(){

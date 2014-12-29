@@ -1,3 +1,11 @@
+* {
+    font-family: "Microsoft Yahei";
+}
+
+* {
+    outline: none;
+}
+
 .subsite {
     width: 340px;
     padding: 5px 20px
@@ -90,8 +98,8 @@
     border-right: none;
 }
 
-.navbar .container  .nav{
-    float:right;
+.navbar .container .nav {
+    float: right;
 }
 
 .subhead .container .bannercats > ul > li {
@@ -130,7 +138,7 @@
     position: absolute;
     left: -10%;
     margin: 0;
-    z-index: 1;
+    z-index: 3;
     border-top: 1px dotted #d3d3d3;
 
 }
@@ -157,10 +165,17 @@
 }
 
 /*导航css*/
-.webdir{
+.webdir {
     display: inline-block;
     position: relative;
 }
+
+.bodycontainer ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
 .webdir > div:first-child > span {
     width: 80px;
     display: inline-block;
@@ -168,17 +183,18 @@
     line-height: 30px;
     font-weight: bold;
     font-size: 14px;
-    cursor:pointer;
+    cursor: pointer;
     padding: 0;
     margin: 0;
-    z-index:11;
+    z-index: 11;
     text-align: left;
     text-indent: 8px;
-    border:1px solid transparent;
+    border: 1px solid transparent;
+
 }
 
 .webdir > div:first-child > span:after {
-    content:url("../images/xk/jt.gif");
+    content: url("../images/xk/jt.gif");
     position: absolute;
     top: -3px;
     right: 5px;
@@ -189,38 +205,35 @@
     right: 4px;
 }
 
-
-
-
 .webdir > div:first-child > ul {
     font-weight: normal;
     display: none;
-    top:30px;
-    left:0;
+    top: 30px;
+    left: 0;
     position: absolute;
     background-color: white;
-    border:1px solid #d3d3d3;
+    border: 1px solid #d3d3d3;
     /*border-top: none;*/
-    padding: 5px 0 0 0 ;
+    padding: 5px 0 0 0;
     margin: 0;
     list-style: none;
-    width:380px;
-    z-index:10;
+    width: 380px;
+    z-index: 10;
 }
-
 
 .webdir > div:first-child > ul li {
     display: inline-block;
     text-align: center;
-    width:33.33%;
-    height:30px;
+    width: 33.33%;
+    height: 30px;
     line-height: 30px;
     border-bottom: 1px dotted #d3d3d3;
 }
-.webdir > div:first-child:hover> span{
+
+.webdir > div:first-child:hover > span {
     background-color: white;
-    border:1px solid #d3d3d3;
-    z-index:11;
+    border: 1px solid #d3d3d3;
+    z-index: 11;
     position: relative;
     border-bottom: none;
 }
@@ -230,10 +243,430 @@
 }
 
 .container .row {
-    padding:0;
+    padding: 0;
     margin: 0;
 }
-.mF_YSlider .pic img,.mF_YSlider .pic ul ,.mF_YSlider .pic li ,.mF_YSlider .pic a{
-    width :100%;
+.bodycontainer a:hover{
+    color: red;
+}
+
+.bodycontainer div {
+    display: inline-block;
+}
+
+.mF_YSlider .pic img, .mF_YSlider .pic ul, .mF_YSlider .pic li, .mF_YSlider .pic a {
+    width: 100%;
+    height: 100%;
+}
+
+.clearrow {
+    height: 5px;
+    display: block;
+    clear: both;
+}
+
+.focus {
+    background: url("../images/xk/focus.png") top left no-repeat;
+    width: 460px;
+    height: 350px;
+    margin-left: 14px;
+    position: relative;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.focus > ul {
+    position: absolute;
+    right: 5px;
+    /*list-style: none;*/
+    overflow: visible;
+}
+
+.focus > ul > li {
+    display: inline-block;
+    width: 60px;
+    font-size: 10px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: bottom;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.focus > ul > li.ui-tabs-active:after {
+    content: url("../images/xk/focus-hover.png");
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+}
+
+/*.focus>ul>li:hover:after{*/
+/*content:url("../images/xk/focus-hover.png");*/
+/*position:  absolute;*/
+/*left:0;*/
+/*bottom: -13px;*/
+/*}*/
+.focus a {
+    color: #808080;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.focus > div {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 280px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+
+}
+
+.focus > div > ul > li {
+    position: relative;
+    list-style: disc;
+    margin-left: 15px;
+    line-height: 30px;
+    height: 30px;
+    /*letter-spacing:1px;*/
+    font-size: 12px;
+}
+
+.focus > div > ul > li > a {
+    display: inline-block;
+    color: #000000;
+    width: 380px;
+    height: 100%;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+
+.focus > div > ul > li > a:hover {
+    color: red;
+}
+
+.focus > div > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+.focus > div > ul > li:first-child {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 10px 0 10px 0;
+    height: 84px;
+
+}
+
+.focus > div > ul > li:first-child > a {
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.focus > div > ul > li > span {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    color: lightgrey;
+    margin-bottom: 10px;
+}
+
+.focus > div > ul > li:first-child > span {
+    display: inline-block;
+    width: 100%;
+    height: 44px;
+    line-height: 20px;
+    color: #888;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.focus > div.hotlist {
+    position: absolute;
+    top: 310px;
+    width: 100%;
+    height: 40px;
+    background-color: #F8F8F8;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+}
+
+.focus > div.hotlist > div:first-child {
+    display: inline-block;
+    width: 80px;
+    border-right: 1px solid #ccc;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #ed9620;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.focus > div.hotlist > div:last-child {
+    position: absolute;
+    left: 80px;
+    display: inline-block;
+    width: 380px;
+    height: 40px;
+    text-indent: 20px;
+    line-height: 40px;
+
+}
+
+.scrollDiv {
+    line-height: 36px;
+    height: 36px;
+    min-height: 36px;
+    list-style: none;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.scrollDiv ul {
+    list-style: none;
+}
+
+.scrollDiv li {
+    line-height: 36px;
+    height: 36px;
+    min-height: 36px;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+#scrollDiv #btn1 {
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    top: 4px;
+    background: url(../images/xk/scrollup-d.png) no-repeat;
+    height: 14px;
+    width: 13px;
+}
+
+#scrollDiv #btn2 {
+    position: absolute;
+    display: inline-block;
+    right: 5px;
+    top: 18px;
+    background: url(../images/xk/scrollup-d.png) 0 -14px no-repeat;
+    height: 14px;
+    width: 13px;
+}
+
+
+.block {
+    border: 1px solid #E8E8E8;
+    border-top: 2px solid #009983;
+    height:295px;
+    width:280px;
+    margin:10px 0 0 10px;
+    vertical-align: top;
+}
+.block.left{
+    margin-left:0;
+}
+.block .title{
+    background-color: #F8F8F8;
+    text-indent: 10px;
+    height:40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    width:100%;
+    position: relative;
+}
+.block .title a{
+    position: absolute;
+    right:0;
+    color:#666;
+    padding:0 10px;
+    font-weight: normal;
+}
+
+.block .title.imgs a{
+    position: relative;
+    right:0;
+    color:#666;
+    padding:0 10px;
+    font-weight: bold;
+}
+.block .title a:hover{
+    color:red;
+}
+.block .list{
+    position: relative;
+    width:100%;
+}
+.block .list ul{
+    list-style: none;
+    padding:10px;
+    width:100%;
+    box-sizing: border-box;
+}
+
+
+.block .list li{
+    height:29px;
+    line-height: 29px;
+    padding-left: 8px;
+    background: url(../images/xk/icons-sprites.png) 0 -118px no-repeat;
+    position: relative;
+}
+
+.block .list li a:link,.block .list li a:visited{
+    color:#666;
+}
+.block .list li a:hover{
+    color:red;
+}
+
+.block .list li span{
+    color:#999;
+    position: absolute;
+    right:0;
+    padding:0 5px;
+}
+.block.imglist{
+    border:none;
+    height:68px;
+    padding:0;
+}
+
+.block.imglist  a ,.block.imglist img,.block.imglist .img{
+    display: block;
+    width:100%;
     height:100%;
+}
+
+
+.block.imgs {
+    position: relative;
+    /*box-sizing: content-box;*/
+
+}
+
+.block.imgs > ul {
+    width:100%;
+    /*list-style: none;*/
+    overflow: visible;
+    display:table;
+}
+
+.block.imgs > ul > li {
+    display:table-cell;
+    width:30%;
+    /*height: 40px;*/
+    line-height: 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    font-size:14px;
+    border-left: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8;
+}
+.block.imgs > ul > li:first-child{
+    border-left: none;
+}
+.block.imgs > ul > li.ui-tabs-active{
+    background-color: white;
+    border-bottom: none;
+}
+.block.imgs > ul > li.ui-tabs-active a{
+    color:#EB961F;
+}
+.block.imgs > ul > li.ui-tabs-active:after {
+    content: url("../images/xk/tabbj.gif") ;
+    position: absolute;
+    left:0;
+    right:0;
+}
+.block.imgs >div > ul{
+    width:100%;
+    box-sizing: border-box;
+}
+.block.imgs >div > ul > li:first-child{
+    height:90px;
+    background: none;
+}
+.block.imgs >div > ul > li:first-child img{
+    vertical-align: top;
+    float:left;
+    margin-right:5px;
+    width:150px;
+    height:80px;
+}
+.block.imgs >div > ul > li:first-child a{
+    display: block;
+    text-indent: 5px;
+}
+.block.imgs >div > ul > li:first-child >div{
+    display: inline-block;
+    float:left;
+    width:296px;
+    line-height: 20px;
+    height:60px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    font-weight: normal;
+    overflow: hidden;
+    word-break: keep-all;
+}
+.block.imgs >div > ul > li:first-child >div> span{
+    position:relative;
+    font-size:12px;
+    padding:0;
+    line-height: 12px ;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+.block.imgs >div > ul > li:first-child{
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.block.imgs .detail{
+    position: absolute;
+    right:15px;
+    bottom: 0px;
+    font-size: 12px;
+}
+
+.list ul.xk_sqws{
+    list-style: none;
+    width: 100%;
+
+}
+.list ul.xk_sqws > li{
+    background: none;
+    height:80px;
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 10px 10px 10px;
+}
+
+.list ul.xk_sqws > li > a,.list ul.xk_sqws > li > a >img {
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
 }

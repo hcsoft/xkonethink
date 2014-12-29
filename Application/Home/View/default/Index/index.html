@@ -8,22 +8,299 @@
     <style>
         /*#myFocus{ width:600px; height:400px;}*/
     </style>
-    <div id="myFocus"><!--焦点图盒子-->
-        <div class="loading"><img src="__IMG__/loading.gif" alt="请稍候..." /></div><!--载入画面(可删除)-->
-        <div class="pic"><!--内容列表(li数目可随意增减)-->
+    <div class="clearrow"></div>
+    <div class="bodycontainer">
+        <div id="myFocus"><!--焦点图盒子-->
+            <div class="loading"><img src="__IMG__/loading.gif" alt="请稍候..."/></div>
+            <!--载入画面(可删除)-->
+            <div class="pic"><!--内容列表(li数目可随意增减)-->
+                <ul>
+                    <volist name=":getDoc(C('XK_BLOCK_1_1'),5)" id="vo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$vo.id}"><img src="./{$vo.cover.path}" alt="{$vo.title}" text="{$vo.title}"/></a></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="focus" id="focustab">
             <ul>
-                <volist name="toplist" id="vo">
-                    <li><a href="#"><img src="./{$vo.cover.path}"  alt="{$vo.title}" text="{$vo.title}" /></a></li>
+                <volist name=":getCatArray(C('XK_BLOCK_1_2'),3)" id="vo">
+                    <li onclick="window.location.href='index.php?s=/Home/Article/lists/category/{$vo.name}.html'"><a
+                            href="#focustab-{$i}">{$vo.title}</a></li>
                 </volist>
             </ul>
+            <volist name=":getCatArrayDoc(C('XK_BLOCK_1_2'),6)" id="vo">
+                <div id="focustab-{$i}">
+                    <ul>
+                        <volist name="vo['arts']" id="subvo" key="j">
+                            <if condition="($j eq 1) ">
+                                <li>
+                                    <a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html"> {$subvo.title}</a>
+                                    <span>{$subvo.content|strip_tags}</span>
+                                </li>
+                                <div class="clearrow"
+                                     style="height:1px;border-bottom: 1px dotted lightgrey;display: block;"></div>
+                                <else/>
+                                <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                                    {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                            </if>
+                        </volist>
+                    </ul>
+                </div>
+            </volist>
+            <div class="hotlist">
+                <div>热点话题</div>
+                <div id="scrollDiv" class="scrollDiv">
+                    <ul>
+                        <volist name=":getHot(6)" id="vo">
+                            <li href="index.php?s=/Home/Article/detail/id/{$vo.id}.html "> {$vo.title}</li>
+                        </volist>
+                    </ul>
+                    <span id="btn1" style="cursor: pointer;"></span><span id="btn2" style="cursor: pointer;"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="block left" style="width:327px;">
+            <div class="title">{:get_category_title(C('XK_BLOCK_2_1'))}<a href="index.php?s=/Home/Article/lists/category/{:get_category_name(C('XK_BLOCK_2_1'))}.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name=":getDoc(C('XK_BLOCK_2_1'),8)" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="block imgs tabs" style="width:480px;">
+            <ul class="title imgs">
+                <volist name=":getCatArray(C('XK_BLOCK_2_2'),6)" id="vo">
+                    <li onclick="window.location.href='index.php?s=/Home/Article/lists/category/{$vo.name}.html'"><a
+                            href="#center1tab-{$i}">{$vo.title}</a></li>
+                </volist>
+            </ul>
+            <volist name=":getCatArrayDoc(C('XK_BLOCK_2_2'),6)" id="vo">
+                <div class="list" id="center1tab-{$i}">
+                    <ul>
+                        <volist name="vo['arts']" id="subvo" key="j">
+                            <if condition="($j eq 1) ">
+                                <li>
+                                    <a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                                        <img src="./{$subvo.cover.path}"/>
+                                        {$subvo.title}</a>
+
+                                    <div>
+                                    <span>
+                                        {$subvo.content|strip_tags}
+                                    </span>
+                                        <a class="detail" href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">...[详细]</a>
+                                    </div>
+                                </li>
+                                <div class="clearrow"
+                                     style="height:1px;border-bottom: 1px dotted lightgrey;display: block;"></div>
+                                <else/>
+                                <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                                    {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                            </if>
+                        </volist>
+                    </ul>
+                </div>
+            </volist>
+        </div>
+        <div class="block " style="width:327px;">
+            <div class="title">{:get_category_title(C('XK_BLOCK_2_3'))}<a href="index.php?s=/Home/Article/lists/category/{:get_category_name(C('XK_BLOCK_2_3'))}.html">更多</a></div>
+            <div class="list">
+                <ul class="xk_sqws">
+                    <volist name=":getCats(C('XK_BLOCK_2_3'),3)" id="subvo">
+                        <li ><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html">
+                            <img src="./{$subvo.cover.path}" alt="{$subvo.title}"/>
+                            </a></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <volist name=":getCats(C('XK_BLOCK_3_1'),3) " id="subvo">
+            <if condition="($i eq 1) ">
+                <div class="block imglist left " style="width:329px;">
+                    <div class="img"><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"><img
+                            src="./{$subvo.cover.path}"/></a></div>
+                </div>
+                <elseif condition="($i eq 2)"/>
+                <div class="block imglist " style="width:482px;">
+                    <div class="img"><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"><img
+                            src="./{$subvo.cover.path}"/></a></div>
+                </div>
+                <else/>
+                <div class="block imglist " style="width:329px;">
+                    <div class="img"><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"><img
+                            src="./{$subvo.cover.path}"/></a></div>
+                </div>
+            </if>
+        </volist>
+        <div class="block left" style="width:327px;">
+            <div class="title">{:get_category_title(C('XK_BLOCK_4_1'))}<a href="index.php?s=/Home/Article/lists/category/{:get_category_name(C('XK_BLOCK_4_1'))}.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name=":getDoc(C('XK_BLOCK_4_1'),8)" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="block imgs" style="width:480px;">
+            <div class="title">{:get_category_title(C('XK_BLOCK_4_2'))}<a href="index.php?s=/Home/Article/lists/category/{:get_category_name(C('XK_BLOCK_4_2'))}.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name=":getDoc(C('XK_BLOCK_4_2'),6)" id="subvo">
+                        <if condition="($i eq 1) ">
+                            <li>
+                                <a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                                    <img src="./{$subvo.cover.path}"/>
+                                    {$subvo.title}</a>
+
+                                <div>
+                                    <span>
+                                        {$subvo.content|strip_tags}
+                                    </span>
+                                    <a class="detail" href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">...[详细]</a>
+                                </div>
+                            </li>
+                            <div class="clearrow"
+                                 style="height:1px;border-bottom: 1px dotted lightgrey;display: block;"></div>
+                            <else/>
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                            </if>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="block " style="width:327px;">
+            <div class="title">快捷服务<a href="index.php?s=/Home/Article/lists/category/jcfwgg.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name="notelist" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="block left" style="width:327px;">
+            <div class="title">服务指南<a href="index.php?s=/Home/Article/lists/category/jcfwgg.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name="notelist" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="block" style="width:480px;">
+            <div class="title">老年保健<a href="index.php?s=/Home/Article/lists/category/jcfwgg.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name="notelist" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="block " style="width:327px;">
+            <div class="title">健康大讲堂<a href="index.php?s=/Home/Article/lists/category/jcfwgg.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name="notelist" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+
+        <div class="block " style="width:327px;">
+            <div class="title">图片新闻<a href="index.php?s=/Home/Article/lists/category/jcfwgg.html">更多</a></div>
+            <div class="list">
+                <ul>
+                    <volist name="notelist" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                            {$subvo.title}</a><span>{:date('m-d',$subvo['create_time'])}</span></li>
+                    </volist>
+                </ul>
+            </div>
         </div>
     </div>
     <script type="text/javascript">
-        myFocus.set({
-            id:'myFocus',//ID
-            pattern:'mF_YSlider',
-            width:600,
-            height:400
+
+        //热点话题滚动
+        (function ($) {
+            $.fn.extend({
+                Scroll: function (opt, callback) {
+                    //参数初始化
+                    if (!opt) var opt = {};
+                    var _btnUp = $("#" + opt.up);//Shawphy:向上按钮
+                    var _btnDown = $("#" + opt.down);//Shawphy:向下按钮
+                    var timerID;
+                    var _this = this.eq(0).find("ul:first");
+                    var lineH = _this.find("li:first").height(), //获取行高
+                            line = opt.line ? parseInt(opt.line, 10) : parseInt(this.height() / lineH, 10), //每次滚动的行数，默认为一屏，即父容器高度
+                            speed = opt.speed ? parseInt(opt.speed, 10) : 500; //卷动速度，数值越大，速度越慢（毫秒）
+                    timer = opt.timer //?parseInt(opt.timer,10):3000; //滚动的时间间隔（毫秒）
+                    if (line == 0) line = 1;
+                    var upHeight = 0 - line * lineH;
+                    //滚动函数
+                    var scrollUp = function () {
+                        _btnUp.unbind("click", scrollUp); //Shawphy:取消向上按钮的函数绑定
+                        _this.animate({
+                            marginTop: upHeight
+                        }, speed, function () {
+                            for (i = 1; i <= line; i++) {
+                                _this.find("li:first").appendTo(_this);
+                            }
+                            _this.css({marginTop: 0});
+                            _btnUp.bind("click", scrollUp); //Shawphy:绑定向上按钮的点击事件
+                        });
+                    }
+                    //Shawphy:向下翻页函数
+                    var scrollDown = function () {
+                        _btnDown.unbind("click", scrollDown);
+                        for (i = 1; i <= line; i++) {
+                            _this.find("li:last").show().prependTo(_this);
+                        }
+                        _this.css({marginTop: upHeight});
+                        _this.animate({
+                            marginTop: 0
+                        }, speed, function () {
+                            _btnDown.bind("click", scrollDown);
+                        });
+                    }
+                    //Shawphy:自动播放
+                    var autoPlay = function () {
+                        if (timer)timerID = window.setInterval(scrollUp, timer);
+                    };
+                    var autoStop = function () {
+                        if (timer)window.clearInterval(timerID);
+                    };
+                    //鼠标事件绑定
+                    _this.hover(autoStop, autoPlay).mouseout();
+                    _btnUp.css("cursor", "pointer").click(scrollUp).hover(autoStop, autoPlay);//Shawphy:向上向下鼠标事件绑定
+                    _btnDown.css("cursor", "pointer").click(scrollDown).hover(autoStop, autoPlay);
+                }
+            })
+        })(jQuery);
+        $(document).ready(function () {
+            $("#scrollDiv").Scroll({line: 1, speed: 500, timer: 3000, up: "btn1", down: "btn2"});
+            myFocus.set({
+                id: 'myFocus',//ID
+                pattern: 'mF_YSlider',
+                width: 690,
+                height: 350
+            });
+            $("#focustab,.block.tabs").tabs({
+                event: "mouseover"
+            });
         });
     </script>
 </block>

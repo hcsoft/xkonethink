@@ -86,8 +86,8 @@
                             <ul>
                                 <volist name="vo['child']" id="subvo">
                                     <li>
-                                        <if condition=" C('INTRO_CAT') eq $vo['id'] ">
-                                            <a href="index.php?s=/Home/Article/{$subvo.id}">{$subvo.title}</a>
+                                        <if condition=" C('XK_INTRO_CAT') eq $vo['id'] ">
+                                            <a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">{$subvo.title}</a>
                                             <else/>
                                             <a href="index.php?s=/Home/Article/lists/category/{$subvo.name}.html">{$subvo.title}</a>
                                         </if>
