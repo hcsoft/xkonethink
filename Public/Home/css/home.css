@@ -893,7 +893,7 @@ ul , ol  {
     background: white;
     border-top: 1px solid #888;
 }
-.cat >ul >li:hover{
+.cat >ul >li:hover,.cat >ul >li.selected{
     background-color: #ccc;
 }
 .cat >ul >li:hover a{

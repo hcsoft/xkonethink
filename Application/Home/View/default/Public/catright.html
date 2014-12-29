@@ -6,7 +6,7 @@
             <div class="cat">
                 <ul>
                     <volist name=":getCats($category['id'],0)" id="subvo">
-                        <li><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"
+                        <li  class="{$category['id'] == $subvo['id']?'selected':''}"><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"
                                title="{$subvo['title']}">
                             {:mb_substr($subvo['title'],0,12,'utf8')}</a>
                         </li>
@@ -17,8 +17,8 @@
             <div class="cat">
                 <ul>
                     <volist name=":getCats($category['pid'],0)" id="subvo">
-                        <li><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"
-                               title="{$subvo['title']}">
+                        <li  class="{$category['id'] == $subvo['id']?'selected':''}"><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"
+                               title="{$subvo['title']}" >
                             {:mb_substr($subvo['title'],0,12,'utf8')}</a>
                         </li>
                     </volist>
