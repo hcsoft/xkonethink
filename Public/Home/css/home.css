@@ -1,3 +1,4 @@
+
 @font-face {font-family: 'uxiconfont';
     src: url('../font/uxiconfont.eot'); /* IE9*/
     src: url('../font/uxiconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -828,4 +829,125 @@
     line-height: 25px;
     background-color: transparent;
     border-top: none;
+}
+
+/*以下是明细页面的css*/
+.breadcrumb{
+    border-bottom: #ddd 1px solid;
+    height:30px;
+    line-height: 30px;
+    font-size: 12px;
+    margin:0;
+    padding: 0;
+}
+.main-content{
+    margin:10px 0 0 0;
+    border: #ddd 1px solid;
+    background: #F7F7F7;
+    padding:0 20px 20px 20px;
+}
+
+.breadcrumb a{
+    text-decoration: none;
+}
+.breadcrumb a:hover{
+    color:red;
+}
+.breadcrumb a:after{
+    content: ' > ';
+    color:#000000;
+}
+.rightmenu {
+    width:245px;
+    height:auto;
+}
+.rightmenu ul{
+    margin: 0;
+}
+.rightmenu li a{
+    overflow: hidden;
+    width:80%;
+    height:20px;
+}
+.rightmenu li span{
+    background-color: white;
+}
+.cat >ul{
+    list-style: none;
+}
+.cat >ul >li {
+    display: block;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+}
+
+.cat >ul >li {
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    border-top: 1px solid #888;
+}
+.cat >ul >li:hover{
+    background-color: #ccc;
+}
+.cat >ul >li:hover a{
+    color:red;
+}
+.cat >ul >li a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+.main-content .block{
+    border-top: none;
+    width:100%;
+    height: auto;
+}
+.main-content .block .title{
+    border-top:2px solid green;
+}
+.main-content .block .list{
+    background-color: white;
+}
+
+.main-content .block .list ul{
+    width: 98%;
+    padding: 0;
+    margin: 0 0 0  10px;
+    box-sizing: border-box;
+}
+
+.artlist{
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.artlist >div > a{
+    color:#000000;
+    font-weight: normal;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+.artlist >div > a:hover{
+    color:red;
+}
+.artlist  >div > a:before{
+    content: '·';
+    display: inline-block;
+    width:10px;
+    text-align: center;
+}
+.artlist > div{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+}
+.artlist > div > span{
+    position: absolute;
+    top:0;
+    right:10px;
 }

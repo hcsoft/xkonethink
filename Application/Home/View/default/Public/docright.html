@@ -1,0 +1,16 @@
+<block name="right">
+    <div class="block span2 rightmenu">
+        <div class="title">{:get_category_title($info['category_id'])}<a
+                href="index.php?s=/Home/Article/lists/category/{:get_category_name($info['category_id'])}.html">更多</a>
+        </div>
+        <div class="list">
+            <ul>
+                <volist name=":getDoc($info['category_id'],8)" id="subvo">
+                    <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html" title="{$subvo['title']}">
+                        {:mb_substr($subvo['title'],0,12,'utf8')}</a><span>{:date('m-d',$subvo['create_time'])}</span>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+</block>

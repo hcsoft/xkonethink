@@ -4,32 +4,45 @@
 </block>
 
 <block name="body">
-      <div class="span9">
-        <!-- Contents
-        ================================================== -->
-        <section id="contents">
-
-			<volist name="list" id="data">
-				<div class="">
-					<h3 class="ellipsis"><a href="{:U('Article/detail?id='.$data['id'])}">{$data.title}</a></h3>
-				</div>
-				<div>
-					<p class="lead">{$data.description}</p>
-				</div>
-				<div>
-					<span><a href="{:U('Article/detail?id='.$data['id'])}">查看全文</a></span>
-					<span class="pull-right">
-						<span class="author">{$data.uid|get_username}</span>&nbsp;&nbsp;
-						<span>发表于 {$data.create_time|date='Y-m-d H:i:s',###}</span>
-						<span>阅读({$data.view})</span>&nbsp;&nbsp;
-                    </span>
-				</div>
-				<hr/>
-	        </volist>
-
-            <div class="onethink pagination pagination-right pagination-large">
-                <article:page cate="$category['id']" listrow="$category['list_row']" />
+    <div class="span9 main-content">
+        <div class="breadcrumb">{:getBreadcrumb($category)}</div>
+        <h3>{$category['title']}</h3>
+        <if condition=" count(getCats($category['id'],1)) gt 0 ">
+            <div class="block left">
+                <volist name=":getCats($category['id'],0)" id="vo">
+                    <div class="title">{$vo.title}<a
+                            href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">更多</a>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <volist name=":getDoc($vo['id'],5)" id="subvo">
+                                <li><a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">
+                                    {:mb_substr($subvo['title'],0,50,'utf8')}</a><span>{:date('m-d',$subvo['create_time'])}</span>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </volist>
             </div>
-        </section>
-      </div>
+            <else/>
+            <section id="contents" class="artlist">
+                <volist name="list" id="data">
+                    <div>
+						<a href="{:U('Article/detail?id='.$data['id'])}">{:mb_substr($data['title'],0,55,'utf8')}</a><span>{$data.create_time|date='Y-m-d',###}</span>
+                    </div>
+                </volist>
+
+                <div class="onethink pagination pagination-right pagination-large">
+                    <article:page cate="$category['id']" listrow="$category['list_row']"/>
+                </div>
+            </section>
+        </if>
+
+
+        {:hook('documentDetailAfter',$category)}
+
+    </div>
+
+    <include file="Public/catright"/>
 </block>
+

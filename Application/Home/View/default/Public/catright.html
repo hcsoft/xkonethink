@@ -1,0 +1,29 @@
+<block name="right">
+    <div class="block span2 rightmenu">
+        <div class="title">{$category['title']}
+        </div>
+        <if condition=" count(getCats($category['id'],1)) gt 0 ">
+            <div class="cat">
+                <ul>
+                    <volist name=":getCats($category['id'],0)" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"
+                               title="{$subvo['title']}">
+                            {:mb_substr($subvo['title'],0,12,'utf8')}</a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+            <else/>
+            <div class="cat">
+                <ul>
+                    <volist name=":getCats($category['pid'],0)" id="subvo">
+                        <li><a href="index.php?s=/Home/Article/lists/category/{$subvo.id}.html"
+                               title="{$subvo['title']}">
+                            {:mb_substr($subvo['title'],0,12,'utf8')}</a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </if>
+    </div>
+</block>

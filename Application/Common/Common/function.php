@@ -1221,3 +1221,56 @@ function getCfg($cfg){
 function getFile($fileid){
     return D('File')->where(array('id' => $fileid))->find();
 }
+
+function getBreadcrumb($art){
+//    echo json_encode($art);
+    $ret = '您现在正在浏览： <a href="index.php">首页</a>';
+//    echo $art['category_id'];
+    echo $art['pid'];
+    $parents = array();
+    if($art['category_id'] ){
+        $isdoc = true;
+        $pid = $art['category_id'];
+    }else{
+        $pid = $art['id'];
+    }
+    $p = get_category($pid);
+    $pid =$p['pid'];
+    while($pid>0){
+        array_unshift($parents, $p);
+        $p = get_category($pid);
+        $pid =$p['pid'];
+    }
+    foreach($parents as $pitem){
+        $ret.='<a href="index.php?s=/Home/Article/lists/category/'.$pitem['name'].'.html">'.$pitem['title'].'</a>';
+    }
+    if($isdoc){
+        $ret.='正文';
+    }else{
+        $ret.='列表';
+    }
+    return $ret;
+}
+function getPre($art){
+    $preid = $art['id'] - 1;
+    if($preid>0) {
+        $preart = D('Document')->where(array('id' => $preid))->find();
+    }
+    if($preart){
+        return '<a href="index.php?s=/Home/Article/detail/id/'.strval($preid).'.html">'.mb_substr($preart['title'],0,50,'utf8').'</a>';
+    }else{
+        return '<span>没有了!</span>';
+    }
+}
+
+function getNext($art){
+    $preid = $art['id'] + 1;
+    if($preid>0) {
+        $preart = D('Document')->where(array('id' => $preid))->find();
+    }
+    if($preart){
+        return '<a href="index.php?s=/Home/Article/detail/id/'.strval($preid).'.html">'.mb_substr($preart['title'],0,50,'utf8').'</a>';
+    }else{
+        return '<span>没有了!</span>';
+    }
+}

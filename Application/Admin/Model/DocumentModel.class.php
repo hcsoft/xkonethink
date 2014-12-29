@@ -139,7 +139,7 @@ class DocumentModel extends Model{
         $id = I('post.id');
         if(empty($id)){	//新增
         	$cate = I('post.category_id');
-        	$check 	=	M('Category')->getFieldById($cate,'check');  	
+        	$check 	=	M('Category')->getFieldById($cate,'check');
             $status = 	$check ? 2 : 1;
         }else{				//更新
             $status = $this->getFieldById($id, 'status');
