@@ -1100,6 +1100,20 @@ function getDoc($catid, $limit = 6)
     return $ret;
 }
 
+function getVideo($catid, $limit = 6)
+{
+    //查询中间栏目1
+    $ret = D('Document')->where(array('category_id' => $catid, 'status' => array('gt', 0)))->order('create_time desc')->limit($limit)->select();
+    foreach ($ret as &$art) {
+        $art = D('Document')->detail($art['id']);
+        if($art['file_id'])
+            $art['video'] = getFile($art['file_id']);
+    }
+    return $ret;
+}
+
+
+
 function getCatArray($catid, $limit = 6)
 {
     //查询中间栏目1
@@ -1170,4 +1184,40 @@ function getHot($limit = 6)
         $arts['cover'] = getcover($arts['cover_id']);
     }
     return $ret;
+}
+
+function getFontLink($str,$limit=8){
+    $ret = array();
+    $rows = explode(';',$str);
+    foreach($rows as $row){
+        $items = explode(',',$row);
+        $item = array('text'=>$items[0],'font'=>$items[1],'link'=>$items[2]);
+        if(count($ret)<$limit)
+             array_push($ret,$item);
+        else
+            break;
+    }
+    return $ret;
+}
+
+function getPicLink($str,$limit=8){
+    $ret = array();
+    $rows = explode(';',$str);
+    foreach($rows as $row){
+        $items = explode(',',$row);
+        $item = array('text'=>$items[0],'pic'=>$items[1],'link'=>$items[2]);
+        if(count($ret)<$limit)
+            array_push($ret,$item);
+        else
+            break;
+    }
+    return $ret;
+}
+
+function getCfg($cfg){
+    return D('Config')->where(array('name' => $cfg))->find();
+}
+
+function getFile($fileid){
+    return D('File')->where(array('id' => $fileid))->find();
 }

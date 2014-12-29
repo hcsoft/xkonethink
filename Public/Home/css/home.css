@@ -1,3 +1,12 @@
+@font-face {font-family: 'uxiconfont';
+    src: url('../font/uxiconfont.eot'); /* IE9*/
+    src: url('../font/uxiconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/uxiconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/uxiconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/uxiconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{font-family:"uxiconfont";font-size:16px;font-style:normal;}
+
 * {
     font-family: "Microsoft Yahei";
 }
@@ -647,9 +656,10 @@
 
 .block.imgs .detail{
     position: absolute;
-    right:15px;
+    right:7px;
     bottom: 0px;
     font-size: 12px;
+    background-color: white;
 }
 
 .list ul.xk_sqws{
@@ -669,4 +679,153 @@
     height:100%;
     width:100%;
     box-sizing: border-box;
+}
+.list ul.fontlist{
+    list-style: none;
+    width:100%;
+    padding:20px 10px;
+}
+
+.list ul.fontlist > li{
+    background: none;
+    height:100px;
+    width:24%;
+    box-sizing: border-box;
+    display: inline-block;
+
+    /*padding: 0 10px 10px 10px;*/
+}
+
+.list ul.fontlist > li >a {
+    width:70px;
+    height:71px;
+    background: url("../images/xk/iconbg.png") no-repeat;
+    line-height:71px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    /*border-radius: 50%;*/
+    /*border: 2px solid lightgrey;*/
+    /*padding: 0 10px 10px 10px;*/
+}
+
+.list ul.fontlist > li >a >i {
+    font-size:35px;
+    color: #3d96be;
+}
+
+.list ul.fontlist > li >a >i:hover {
+    color: red;
+}
+
+.list ul.fontlist>li > span{
+    color:#3D96BE;
+    height: 30px;
+    width: 58px;
+    bottom: 0;
+    text-align: center;
+    font-size:12px;
+}
+
+.list.video{
+    padding:10px;
+    box-sizing: border-box;
+}
+
+
+.list.video video{
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+}
+
+.block.imgs.pic > span{
+    /*background-color: #F8F8F8;*/
+    display: inline-block;
+    text-indent: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #E8E8E8;
+}
+.block.imgs.pic{
+    height:230px;
+    border:none;
+}
+.block.imgs.pic > ul{
+    position: absolute;
+    width:455px;
+    right:0;
+    top:0;
+    display: inline-block;
+    border-top: 1px solid #E8E8E8;
+    border-right: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
+}
+.block.imgs.pic >ul > li{
+    width:200px;
+}
+
+.block.imgs.pic .list  >ul {
+    width:100%;
+    height:200px;
+}
+
+.block.imgs.pic .list  >ul >li {
+    background:none;
+    display: inline-block;
+    width:140px;
+    height:140px;
+    margin:15px 24px 0 0 ;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.block.imgs.pic .list  >ul >li img {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+.block.imgs.pic .list  >ul >li a {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #009983;
+    display: block;
+    color: white;
+    opacity:0.7;
+    box-sizing: border-box;
+}
+.block.friendlink{
+    height:125px;
+}
+.block.friendlink > .list >  ul {
+    list-style: none;
+}
+.block.friendlink > .list >  ul > li {
+    background:none ;
+    display: inline-block;
+}
+.friendlink img{
+    width:155px;
+    height:65px;
+}
+.footer{
+    font-size: 12px;
+    line-height: 25px;
+    background-color: transparent;
+    border-top: none;
 }
