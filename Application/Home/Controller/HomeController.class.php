@@ -26,15 +26,15 @@ class HomeController extends Controller {
         /* 读取站点配置 */
         $config = api('Config/lists');
         C($config); //添加配置
-        $this->assign('subwebsite',D('Category')->where( array( 'pid' =>C('XK_SUB_ROOT_CAT')))->select());
+        $this->assign('subwebsite',D('Category')->where( array( 'pid' =>C('XK_SUB_ROOT_CAT'),'status'=>1))->select());
         //查询栏目
-        $subbannercat = D('Category')->where( array( 'pid' =>C('XK_SUB_BANNER_CAT')))->select();
+        $subbannercat = D('Category')->where( array( 'pid' =>C('XK_SUB_BANNER_CAT'),'status'=>1))->select();
         $introcat = C("XK_INTRO_CAT");
         foreach($subbannercat as &$cat){
             if($cat['id'] <> $introcat){
-                $cat['child'] =  D('Category')->where( array( 'pid' =>$cat['id']))->select();
+                $cat['child'] =  D('Category')->where( array( 'pid' =>$cat['id'],'status'=>1))->select();
             }else{
-                $cat['child'] =  D('Document')->where( array( 'category_id' =>$cat['id']))->select();
+                $cat['child'] =  D('Document')->where( array( 'category_id' =>$cat['id'],'status'=>1))->select();
             }
         }
         $this->assign('subbannercat',$subbannercat);

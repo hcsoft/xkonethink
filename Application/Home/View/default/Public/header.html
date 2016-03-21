@@ -86,12 +86,12 @@
                         <a href="index.php?s=/Home/Article/lists/category/{$vo.name}.html">{$vo.title}</a>
                         <notempty name="vo['child']">
                             <ul>
-                                <volist name="vo['child']" id="subvo">
+                                <volist name="vo['child']" id="subvo" offset="0" length='10'>
                                     <li>
                                         <if condition=" C('XK_INTRO_CAT') eq $vo['id'] ">
-                                            <a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html">{$subvo.title}</a>
+                                            <a href="index.php?s=/Home/Article/detail/id/{$subvo.id}.html" title="{$subvo.title}">{$subvo.title}</a>
                                             <else/>
-                                            <a href="index.php?s=/Home/Article/lists/category/{$subvo.name}.html">{$subvo.title}</a>
+                                            <a href="index.php?s=/Home/Article/lists/category/{$subvo.name}.html" title="{$subvo.title}">{$subvo.title}</a>
                                         </if>
                                     </li>
                                 </volist>
